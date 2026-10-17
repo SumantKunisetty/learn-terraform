@@ -8,6 +8,10 @@ resource "aws_instance" "instnace" {
 }
 
 resource "null_resource" "test" {
+
+    triggers = {
+        always = timestamp()
+    }
     provisioner "remote-exec" {
         connection {
           type = "ssh"
