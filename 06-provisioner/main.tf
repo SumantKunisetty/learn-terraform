@@ -6,6 +6,7 @@ resource "aws_instance" "test"{
         Name = "test"
     }
     provisioner "remote-exec" {
+        when = create
         connection {
             type = "ssh"
             host = self.public_ip
@@ -13,7 +14,7 @@ resource "aws_instance" "test"{
             password = "DevOps321"
         } 
         inline = [ 
-            "echo Hi Sumant and Usha > /tmp/sample.txt"
+            "echo Hi Sumant and Usha, Wish you a great future > /tmp/sample.txt"
         ]
     }
 }
