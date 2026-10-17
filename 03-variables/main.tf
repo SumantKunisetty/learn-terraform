@@ -22,7 +22,7 @@ variable "info" {
     type = map
     default = {
         name = "Sumant"
-        Company = "IBM"
+        company = "IBM"
         years = 6
     }
 }
