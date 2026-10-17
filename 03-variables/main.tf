@@ -61,6 +61,6 @@ output "x6" {
     value = "I am giving the random ${var.random}"
 }
 
-output "x7" {
-    value = " example of ${var.initial}"
-}
+# output "x7" {
+#     value = " example of ${var.initial}"
+# }
