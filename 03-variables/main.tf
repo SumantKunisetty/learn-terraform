@@ -27,6 +27,16 @@ variable "info" {
     }
 }
 
+variable "random" {
+    type = any
+    default =  "1a2b3c"
+}
+
+variable "initial" {
+    type = any
+    default = null
+}
+
 output "x1" {
     value= var.env
 }
@@ -45,4 +55,12 @@ output "x4" {
 
 output "x5" {
   value = "${var.info["name"]} is working in ${var.info["company"]} from ${var.info["years"]} years"
+}
+
+output "x6" {
+    value = "I am giving the random ${var.random}"
+}
+
+output "x7" {
+    value = " example of ${var.initial}"
 }
