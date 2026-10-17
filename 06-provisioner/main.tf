@@ -3,7 +3,7 @@ resource "aws_instance" "test"{
     instance_type = "t3.micro"
     vpc_security_group_ids = ["sg-04dce564af1818b33"]
     tags = {
-        name = "test"
+        Name = "test"
     }
     provisioner "remote-exec" {
         connection {
@@ -13,7 +13,7 @@ resource "aws_instance" "test"{
             password = "DevOps321"
         } 
         inline = [ 
-            "echo Hi Sumant > /tmp/sample.txt"
+            "echo Hi Sumant and Usha > /tmp/sample.txt"
         ]
     }
 }
