@@ -6,7 +6,7 @@ terraform {
   }
 }
 
-resource "null_resource" "name" {
+resource "null_resource" "echoing" {
     provisioner "local-exec" {
       command = "echo Hello world"
     }
