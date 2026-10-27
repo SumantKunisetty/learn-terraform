@@ -1,8 +1,8 @@
 module "test"{
     source = "./sample"
-    # message = var.message
-    # a = var.first
-    # b = var.second
+    message = var.message
+    a = var.first
+    b = var.second
 }
 
 
