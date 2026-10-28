@@ -16,5 +16,5 @@ variable "servers" {
 }
 
 output "server_list" {
-  value= aws_instance.main.private_ip
+  value= [for o in aws_instance.main : o.id]
 }
