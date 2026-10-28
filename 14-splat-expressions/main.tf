@@ -19,6 +19,6 @@ output "server_list" {
   value= [for o in aws_instance.main : o.id]
 }
 
-output "server_list_custom"{
-    value = [for i,j in aws_instance.main : i => j.id]
+output "server_list_custom" {
+    value = {for i,j in aws_instance.main : i => j.id}
 }
